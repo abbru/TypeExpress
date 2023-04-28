@@ -8,7 +8,6 @@ const router = express.Router()
 router.get('/', (async (req, res) => {
   try {
     const params = toParamsGeneral(req.query)
-    console.log(params)
     const result = await pingGenerateWithParamsService(params)
     return res.status(200).send(result)
   } catch (e: any) {

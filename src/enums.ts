@@ -32,4 +32,9 @@ export enum StatusCodeEnum {
   InternalServerError = 500
 }
 
+export enum Status {
+  Error = 'Error',
+  Success = 'Success'
+}
+
 export const Idsrv = [411]
