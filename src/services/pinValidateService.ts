@@ -1,9 +1,9 @@
-import { pinValidateParams } from '../interfaces/models/params'
-import { generalResponse } from '../interfaces/models/responses'
+import { PinValidateParams } from '../interfaces/models/params'
+import { ResponseInfoMedia } from '../interfaces/models/responses'
 import { toPinValidateResponse } from '../utils/responses'
 import { fetchServices } from './fetchServices'
 
-export const pinValidateService = async (params: pinValidateParams): Promise<generalResponse> => {
+export const pinValidateService = async (params: PinValidateParams): Promise<ResponseInfoMedia> => {
   if (process.env.API_URL === undefined) {
     throw new Error('API_URL is not defined')
   }

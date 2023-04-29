@@ -1,7 +1,7 @@
 import { parseMsisdn, parseCountry, parseCarrier, parseIdsrv, parsePin } from './utils'
-import { generalParams, pinValidateParams } from '../interfaces/models/params'
+import { GeneralParams, PinValidateParams } from '../interfaces/models/params'
 
-export const toParamsGeneral = (objectFromRequest: any): generalParams => {
+export const toParamsGeneral = (objectFromRequest: any): GeneralParams => {
   return {
     msisdn: parseMsisdn(objectFromRequest.msisdn),
     country: parseCountry(objectFromRequest.country),
@@ -10,7 +10,7 @@ export const toParamsGeneral = (objectFromRequest: any): generalParams => {
   }
 }
 
-export const toParamsPinValidate = (objectFromRequest: any): pinValidateParams => {
+export const toParamsPinValidate = (objectFromRequest: any): PinValidateParams => {
   return {
     msisdn: parseMsisdn(objectFromRequest.msisdn),
     country: parseCountry(objectFromRequest.country),

@@ -1,10 +1,11 @@
 import { Status } from '../enums'
 
-export interface GeneralResponse {
+export interface ResponseInfoMedia {
   status: Status
   description: string
+  pinId?: string
 }
 
-export interface PinGenerateResponse extends GeneralResponse {
+export interface PinGenerateResponse extends ResponseInfoMedia {
   pinId: string
 }
