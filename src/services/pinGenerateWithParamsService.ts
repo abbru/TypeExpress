@@ -1,4 +1,4 @@
-import { fetchServices } from './fetchServices'
+import { fetchApi } from '../utils/utils'
 import { GeneralParams } from '../interfaces/models/params'
 import { InfoMediaResponse } from '../interfaces/models/responses'
 import { toPinGenerateResponse } from '../utils/responses'
@@ -11,6 +11,6 @@ export const pingGenerateWithParamsService = async (params: GeneralParams): Prom
   const method = 'POST'
   const body = params
 
-  const response = toPinGenerateResponse(await fetchServices(url, method, body))
+  const response = toPinGenerateResponse(await fetchApi(url, method, body))
   return response
 }

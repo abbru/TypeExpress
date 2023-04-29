@@ -1,7 +1,7 @@
 import { PinValidateParams } from '../interfaces/models/params'
 import { InfoMediaResponse } from '../interfaces/models/responses'
 import { toPinValidateResponse } from '../utils/responses'
-import { fetchServices } from './fetchServices'
+import { fetchApi } from '../utils/utils'
 
 export const pinValidateService = async (params: PinValidateParams): Promise<InfoMediaResponse> => {
   if (process.env.API_URL === undefined) {
@@ -11,6 +11,6 @@ export const pinValidateService = async (params: PinValidateParams): Promise<Inf
   const method = 'POST'
   const body = params
 
-  const response = toPinValidateResponse(await fetchServices(url, method, body))
+  const response = toPinValidateResponse(await fetchApi(url, method, body))
   return response
 }
