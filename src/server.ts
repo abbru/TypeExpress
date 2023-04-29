@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv'
 import express from 'express'
 import pinGenerateWithParamsRouter from './routes/pinGenerateWithParams'
+import pinValidateRouter from './routes/pinValidate'
 
 dotenv.config()
 
@@ -11,6 +12,8 @@ app.get('/', function (_req, res) {
 })
 
 app.use('/infomedia/pinGenerateWithParams', pinGenerateWithParamsRouter)
+
+app.use('/infomedia/pinValidate', pinValidateRouter)
 
 app.listen(3000)
 

@@ -1,14 +1,14 @@
-import express, { RequestHandler } from 'express'
-import { pingGenerateWithParamsService } from '../services/pinGenerateWithParamsService'
-import { toParamsGeneral } from '../utils/params'
+import express from 'express'
+import { toParamsPinValidate } from '../utils/params'
+import { pinValidateService } from '../services/pinValidateService'
 import { StatusCodeEnum } from '../interfaces/enums'
 
 const router = express.Router()
 
 router.get('/', (async (req, res) => {
   try {
-    const params = toParamsGeneral(req.query)
-    const result = await pingGenerateWithParamsService(params)
+    const params = toParamsPinValidate(req.query)
+    const result = await pinValidateService(params)
     return res.status(200).send(result)
   } catch (e: any) {
     return res.status(400).send({
@@ -17,6 +17,6 @@ router.get('/', (async (req, res) => {
       message: e.message
     })
   }
-}) as RequestHandler)
+}) as express.RequestHandler)
 
 export default router

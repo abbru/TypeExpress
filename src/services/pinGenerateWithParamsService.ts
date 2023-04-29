@@ -1,8 +1,9 @@
 import { fetchServices } from './fetchServices'
-import { generalParams, generalResponse } from '../types'
+import { generalParams } from '../interfaces/models/params'
+import { pinGenerateResponse } from '../interfaces/models/responses'
 import { toPinGenerateResponse } from '../utils/responses'
 
-export const pingGenerateWithParamsService = async (params: generalParams): Promise<generalResponse> => {
+export const pingGenerateWithParamsService = async (params: generalParams): Promise<pinGenerateResponse> => {
   if (process.env.API_URL === undefined) {
     throw new Error('API_URL is not defined')
   }

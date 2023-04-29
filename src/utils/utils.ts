@@ -1,4 +1,4 @@
-import { Carrier, Country, Idsrv, Status } from '../enums'
+import { Carrier, Country, Idsrv, Status } from '../interfaces/enums'
 
 const isNumber = (number: number): boolean => {
   return typeof number !== 'number'
@@ -45,7 +45,7 @@ export const parseCarrier = (carrierFromRequest: any): Carrier => {
   return carrierFromRequest
 }
 
-export const parseIdsrv = (idsrvFromRequest: any): number => {
+export const parseIdsrv = (idsrvFromRequest: any): string => {
   if (!isNumber(idsrvFromRequest) && !isIdsrv(idsrvFromRequest)) {
     throw new Error('Incorrect or missing idsrv')
   }
@@ -71,4 +71,11 @@ export const parsePinId = (pinIdFromRequest: any): string => {
     throw new Error('Incorrect or missing pinId')
   }
   return pinIdFromRequest
+}
+
+export const parsePin = (pinFromRequest: any): string => {
+  if (!isNumber(pinFromRequest)) {
+    throw new Error('Incorrect or missing pin')
+  }
+  return pinFromRequest
 }
