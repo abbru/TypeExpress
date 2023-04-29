@@ -1,5 +1,5 @@
 import { parseStatus, parseDescription, parsePinId } from './utils'
-import { ResponseInfoMedia, PinGenerateResponse } from '../interfaces/models/responses'
+import { InfoMediaResponse, PinGenerateResponse } from '../interfaces/models/responses'
 
 export const toPinGenerateResponse = (objectFromRequest: any): PinGenerateResponse => {
   return {
@@ -9,7 +9,7 @@ export const toPinGenerateResponse = (objectFromRequest: any): PinGenerateRespon
   }
 }
 
-export const toPinValidateResponse = (objectFromRequest: any): ResponseInfoMedia => {
+export const toPinValidateResponse = (objectFromRequest: any): InfoMediaResponse => {
   return {
     status: parseStatus(objectFromRequest.status),
     description: parseDescription(objectFromRequest.description)
