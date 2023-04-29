@@ -1,6 +1,6 @@
 import express, { RequestHandler } from 'express'
 import { pingGenerateWithParamsService } from '../services/pinGenerateWithParamsService'
-import { toParamsGeneral } from '../utils'
+import { toParamsGeneral } from '../utils/params'
 import { StatusCodeEnum } from '../enums'
 
 const router = express.Router()

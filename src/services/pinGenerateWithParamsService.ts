@@ -1,6 +1,6 @@
 import { fetchServices } from './fetchServices'
 import { generalParams, generalResponse } from '../types'
-import { toPinGenerateResponse } from '../utils'
+import { toPinGenerateResponse } from '../utils/responses'
 
 export const pingGenerateWithParamsService = async (params: generalParams): Promise<generalResponse> => {
   if (process.env.API_URL === undefined) {
