@@ -1,5 +1,5 @@
 import { toParamsPinValidate, toParamsGeneral } from '../utils/params'
-import { pinGenerateWithParamsService, pinValidateService } from '../services/subscribeService'
+import { pinGenerateWithParamsService, pinValidateService } from '../services/mobilePaymentsService'
 import { InfoMediaResponse } from '../interfaces/models/responses'
 import { GeneralParams, PinValidateParams } from '../interfaces/models/params'
 

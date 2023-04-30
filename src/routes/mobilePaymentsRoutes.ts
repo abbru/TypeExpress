@@ -1,6 +1,6 @@
 import express, { RequestHandler } from 'express'
 import { StatusCodeEnum } from '../interfaces/enums'
-import { getPinGenerateWithParams, getPinValidate } from '../controllers/subscribeController'
+import { getPinGenerateWithParams, getPinValidate } from '../controllers/mobilePaymentsController'
 import { GeneralParams, PinValidateParams } from '../interfaces/models/params'
 
 const router = express.Router()

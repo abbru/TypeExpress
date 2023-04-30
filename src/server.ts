@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv'
 import express from 'express'
-import subscribeRoutes from './routes/subscribeRoutes'
+import subscribeRoutes from './routes/mobilePaymentsRoutes'
 
 dotenv.config()
 
