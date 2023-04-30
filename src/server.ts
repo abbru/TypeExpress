@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv'
 import express from 'express'
-import subscribeRoutes from './routes/mobilePaymentsRoutes'
+import mobilePaymentsRoutes from './routes/mobilePaymentsRoutes'
 
 dotenv.config()
 
@@ -10,7 +10,7 @@ app.get('/', function (_req, res) {
   res.send('Hola Juan Carlo, Que haces chupa pija?')
 })
 
-app.use('/infomedia/', subscribeRoutes)
+app.use('/infomedia/', mobilePaymentsRoutes)
 
 app.listen(3000)
 
